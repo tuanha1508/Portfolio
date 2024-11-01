@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Con gà Maiien </title>
+    <style type="text/css">
+        a:visited {
+            color: var(--skin-color);
+        }
+        a:active {
+            color: var(--skin-color);
+        }
+    </style>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/skins/color_main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+<link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+<link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+<link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+<link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+<link rel="stylesheet" href="css/style-switcher.css">
+</head>
+<body>
+    <canvas>
+
+    </canvas>
+    <!-- Main Container -->
+     <div class="main-container">
+        <!--Menu Sidebar-->
+        <div class="aside">
+            <div class="logo" style="--stacks: 3;">
+                <a href="#" style="--index: 0"><span>W</span>elcome</a>
+                <a href="#" style="--index: 1"><span>W</span>elcome</a>
+                <a href="#" style="--index: 2"><span>W</span>elcome</a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user-secret"></i>About</a></li>
+                <li><a href="#services"><i class="fa fa-list-ul"></i>Services</a></li>
+                <li><a href="#activities"><i class="fa fa-code-branch"></i>Activities</a></li>
+                <li><a href="#contact"><i class="fa fa-id-card"></i>Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!--Home Section Start-->
+            <section class="home active section" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello"> Hello, my name is <span class="name">ANH TUAN HUYNH</span></h3>
+                            <h3 class="my-profession">I'm a(n) <span class="typing"></span></h3>
+                            <p>I'm a newbie Software Developer for around 1 year. My expertise is to create app, web, and many more...</p>
+                            <a href="#contact" data-section-index="0" class="btn hire-me" style="color: aliceblue;">Contact me</a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <canvas id ="Matrix">
+
+                            </canvas>
+                        </div>        
+                    </div>
+                </div>
+            </section>
+            <!--Home Section End-->
+            <!--About Section Start-->
+            <section class="about section" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>I'm <span>Software Developer</span></h3>
+                                    <p class="printing"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p>Birthday : <span>Feb 4, 2006</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Age : <span>18</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Website : <span>www.domain.com</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Email : <span>tuanafk2006@gmail.com</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Degree : <span>Bachelor of Computer Science</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Phone : <span>+1 (656) 215 7984</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>City : <span>Tampa</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Freelance : <span>Available</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="Resume.docx" download="Resume" class="btn">Download resume</a> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <h5>Competitive Programming</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="skill-percent">80%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>JS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 56%;"></div>
+                                                <div class="skill-percent">56%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>HTML</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 72%;"></div>
+                                                <div class="skill-percent">72%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Dart</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 52%;"></div>
+                                                <div class="skill-percent">52%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- Timeline Item -->
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2020 - 2023
+                                                    </h3>
+                                                    <h4 class="timeline-title">Student at <br> <a href = "https://www.facebook.com/lqddn/?locale=vi_VN"><span>&#9830</span> Le Quy Don High School For the Gifted </a></h4>
+                                                 </div>
+                                                 <!--Timeline Item-->
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2024 - 2028
+                                                    </h3>
+                                                    <h4 class="timeline-title">Student at <br> <a href = "https://my.usf.edu/new_myusf/home_myusf/index"><span>&#9830</span> University of South Florida</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- Timeline Item -->
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Jun 2023 - Sep 2023
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://drive.google.com/file/d/1Vu8xNKxp52z1L4qUFf33smailp8pN3UP/view"><span>&#9830</span> Kite Academy</a><br><em><small><small>Intern - Technology Department</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Assisted developing company's website. <br>
+                                                        &#9830 Edited code for company software and applications. <br>
+                                                        &#9830 Managed 3 programming language classes for 30 students.
+                                                    </p>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product padd-15">
+                                    <h3 class="title">Project</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- Timeline Item -->
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Jul 2022 - Dec 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://docs.google.com/document/d/197z2mieuNkaD0KW6f5DuJr6dPe0phsrNBVgF_t-wYbY/edit?tab=t.0#heading=h.gjdgxs"> <b><span>&#9830</span> Sign Speak</b></a> <br><em><small><small>Application supporting hearing impaired people</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Led a 2-member competition team and won the first prize in the city-level <br> &nbsp;&nbsp; Science and Technology competition.<br>
+                                                        &#9830 Researched hand gesture recognition technology (Hand Tracking) <br> &nbsp;&nbsp; using OpenCV and Media Pipe in Python.
+                                                        <br>
+                                                        <a href = "https://github.com/tuanha1508/Sign-Speak">Github</a> 
+                                                    </p>
+                                                 </div>
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Jan 2022 - May 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://github.com/tuanha1508/Depresol_Application"> <b><span>&#9830</span> Depresol</b></a><br><em><small><small>Application chatting for depressed people</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Researched the practical situation of depression and target users. <br> 
+                                                        &#9830 Created an automatic chat chatbot by collecting and training data, <br> &nbsp;&nbsp; helping to detect the level of depression from users.
+                                                    </p>
+                                                 </div>
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Oct 3, 2022 - Nov 16, 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://github.com/phucmap85/VACIRIS"> <b><span>&#9830</span> Vaciris</b></a><br><em><small><small>Application tracking person has been vaccinated</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Researched face recognition technology using Haar Cascade <br> &nbsp;&nbsp; for solving image, MTCNN for training model and ArcFace for main model.<br>
+                                                        &#9830 Resulting accuracy up to 90% for many participants and 93% for few participants.
+                                                    </p>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="leadership padd-15">
+                                    <h3 class="title">Leadership</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- Timeline Item -->
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Mar 2023 - Now
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://www.facebook.com/codmosproject"> <b><span>&#9830</span> CODMOS</b></a><br><em><small>President</small></em> <br><em><small><small>A club sharing programming knowledge for beginners</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        
+                                                        &#9830 Coordinated and assigned task to 20 members. <br>
+                                                        &#9830 Managed training sessions to coach and establish Informatics lessons for young.<br>
+                                                        &#9830 Directed lecture videos about programming.<br>
+                                                    </p>
+                                                 </div>
+                                                 <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Sep 2022 - Sep 2023
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://www.facebook.com/thecanary.volunteer"> <b><span>&#9830</span> Canary Club</b></a><br><em><small>Head of Technical Department</small></em><br><em><small><small>A volunteer club to help underprivileged people in Da Nang</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Projected food sales and souvenirs at fireworks shows, raising 8 million VND. <br>
+                                                        &#9830 Gave flowers to janitors and street vendors on International Women's Day. <br>
+                                                        &#9830 Donated meals to homeless people on Tet holiday <br>
+                                                        &#9830 Organized a volunteer trip for 50 children.
+                                                    </p>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--About Section End-->
+            <!--Services Section Start-->
+            <section class="service section" id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-mobile-alt"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-palette"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                        <!--Service item Start-->
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-bullhorn"></i>
+                                </div>
+                                <h4>Software Developer</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Service Section End-->
+            <!--Activities Section Start-->
+            <section class ="activities section" id="activities">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Extracurricular Activities</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="activities-heading padd-15">
+                            <h2  style="font-family: Researcher;">My Projects</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Activities item start-->
+                        <div class="activities-item padd-15">
+                            <div class="activities-item-inner shadow-dark">
+                                <div class="activities-img">
+                                    <img src="images/codmos1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activities-item padd-15">
+                            <div class="activities-item-inner shadow-dark">
+                                <div class="activities-img">
+                                    <img src="images/codmos2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activities-item padd-15">
+                            <div class="activities-item-inner shadow-dark">
+                                <div class="activities-img">
+                                    <img src="images/codmos3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activities-item padd-15">
+                            <div class="activities-item-inner shadow-dark">
+                                <div class="activities-img">
+                                    <img src="images/greenevolution1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Activities Section End-->
+            <!--Contact Section Start-->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Any Question ?</h3>
+                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                        <!-- Contact info item start-->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <h4>Call Us On</h4>
+                            <p>+1 (656) 215 7984</p>
+                         </div>
+                         <!-- Contact info item start-->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <p>tuanafk2006@gmail.com (personal) <br> tuananhhuynh@usf.edu (school)</p>
+                         </div>
+                         <!-- Contact info item start-->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon">
+                                <i class="fa fa-globe-europe"></i>
+                            </div>
+                            <h4>Resume</h4>
+                            <a href="https://docs.google.com/document/d/1kqTCKGo399S-g4kulmyjMmfSKiWPfMCL/edit">Link</a>
+                         </div>     
+                    </div>
+                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                    <!--Contact Form-->
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group"> 
+                                        <input type="text" style="font-family: Pixelify Sans;" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email"  style="font-family: Pixelify Sans;" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text"  style="font-family: Pixelify Sans;" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name=""  style="font-family: Pixelify Sans;" class="form-control" id="" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <button type="submit"  style="font-family: Pixelify Sans;" class="btn">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Contact Section End-->
+        </div>
+     </div>
+     <!--Style Switcher Start-->
+     <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas "></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+     </div>
+     <!--Style Switcher End-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/matrix.js"></script>
+</body>
+</html>
