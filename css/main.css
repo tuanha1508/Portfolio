@@ -55,6 +55,7 @@
     --bg-black-50:#393939;
     --text-black-900:#ffffff;
     --text-black-700:#e9e9e9;
+    --slide-color: #1A3636;
 }
 body.dark {
     --bg-black-900:#f2f2fc;
@@ -62,6 +63,7 @@ body.dark {
     --bg-black-50:#e8dfec;
     --text-black-900:#151515;
     --text-black-700:#504e70;
+    --slide-color: #98ABEE;
 }
 body { 
     line-height : 1.5;
@@ -781,8 +783,8 @@ h3.my-profession {
 }
 .service .service-item {
     margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 .service .service-item .service-item-inner {
     background-color: var(--bg-black-100);
@@ -846,16 +848,21 @@ h3.my-profession {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    display: none;
 }
 .activities .activities-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    display: none;
+}
+.activities .activities-item-inner .activities-img {
+    display: none;
 }
 .activities .activities-item-inner .activities-img img {
     width: 100%;
-    display: block;
+    display: none;
 }
 .contact-title {
     font-family: "Pixelify Sans";
@@ -957,4 +964,118 @@ h3.my-profession {
     text-align: center;
     transition: all 0.3s ease;
     font-family: 'Pixelify Sans';
+}
+.slider-container {
+    background: radial-gradient(circle at center, 
+        var(--slide-color) 0%, 
+        rgba(26, 54, 54, 0.7) 30%,  /* More intense center */
+        rgba(26, 54, 54, 0.4) 70%,  /* Wider spread */
+        rgba(26, 54, 54, 0.2) 100%  /* Softer edges */
+    );
+    padding: 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.slider-title {
+    font-family: 'Pixelify Sans';
+    text-align: center;
+    color: var(--text-black-900);
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slider-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background-color: var(--skin-color);
+    border-radius: 5px;
+}
+
+/* Remove the before/after gradients by commenting them out or deleting them */
+/* .slider-container::before,
+.slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+} */
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(100px * 20); /* Increased number of slides */
+    animation: scroll 80s linear infinite; /* Increased duration for smoother motion */
+}
+
+.slide {
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slide:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px var(--skin-color)) 
+            drop-shadow(0 0 20px var(--skin-color)) 
+            drop-shadow(0 0 30px var(--skin-color));
+    animation: hologram 1.5s ease-in-out infinite alternate;
+}
+
+.slide img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 10)); /* Half of total width */
+    }
+}
+
+@keyframes hologram {
+    0% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 5px var(--skin-color)) 
+                drop-shadow(0 0 10px var(--skin-color));
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 15px var(--skin-color)) 
+                drop-shadow(0 0 25px var(--skin-color));
+    }
+    100% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 5px var(--skin-color)) 
+                drop-shadow(0 0 10px var(--skin-color));
+    }
+}
+
+/* Pause animation on hover */
+.slider:hover .slide-track {
+    animation-play-state: paused;
 }

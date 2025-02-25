@@ -11,6 +11,36 @@
         a:active {
             color: var(--skin-color);
         }
+        a{ color: var(--skin-color);}
+
+        /* Slower animations to prevent gaps */
+        .service-item:nth-child(1) .slide-track {
+            animation: scroll 50s linear infinite; /* Programming Languages */
+        }
+        
+        .service-item:nth-child(2) .slide-track {
+            animation: scroll 40s linear infinite; /* Frameworks */
+        }
+        
+        .service-item:nth-child(3) .slide-track {
+            animation: scroll 35s linear infinite; /* ML/DL */
+        }
+        
+        .service-item:nth-child(4) .slide-track {
+            animation: scroll 45s linear infinite; /* Others */
+        }
+
+        /* Ensure slides take up enough space */
+        .slide {
+            min-width: 200px; /* Adjust this value based on your slide width */
+            padding: 0 20px; /* Add some spacing between slides */
+        }
+
+        /* Make sure the track is wide enough */
+        .slide-track {
+            display: flex;
+            width: calc(200px * 20); /* Adjust based on total number of slides including duplicates */
+        }
     </style>
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -68,7 +98,7 @@
             <ul class="nav">
                 <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="#about"><i class="fa fa-user-secret"></i>About</a></li>
-                <li><a href="#services"><i class="fa fa-list-ul"></i>Services</a></li>
+                <li><a href="#services"><i class="fa fa-list-ul"></i>Skills</a></li>
                 <li><a href="#activities"><i class="fa fa-code-branch"></i>Activities</a></li>
                 <li><a href="#contact"><i class="fa fa-id-card"></i>Contact</a></li>
             </ul>
@@ -152,29 +182,29 @@
                                         <div class="skill-item padd-15">
                                             <h5>Competitive Programming</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
-                                                <div class="skill-percent">80%</div>
+                                                <div class="progress-in" style="width: 90%;"></div>
+                                                <div class="skill-percent">90%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>JS</h5>
+                                            <h5>MERN Stack</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 56%;"></div>
-                                                <div class="skill-percent">56%</div>
+                                                <div class="progress-in" style="width: 86%;"></div>
+                                                <div class="skill-percent">86%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>HTML</h5>
+                                            <h5>MEVN Stack</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 72%;"></div>
                                                 <div class="skill-percent">72%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>Dart</h5>
+                                            <h5>Machine Learning / Deep learning</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 52%;"></div>
-                                                <div class="skill-percent">52%</div>
+                                                <div class="progress-in" style="width: 75%;"></div>
+                                                <div class="skill-percent">75%</div>
                                             </div>
                                         </div>
                                     </div>
@@ -186,6 +216,14 @@
                                     <div class="row">
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
+                                                <!--Timeline Item-->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2024 - 2028
+                                                    </h3>
+                                                    <h4 class="timeline-title">Student at <br> <a href = "https://my.usf.edu/new_myusf/home_myusf/index"><span>&#9830</span> University of South Florida</a></h4>
+                                                </div>
                                                 <!-- Timeline Item -->
                                                  <div class="timeline-item">
                                                     <div class="circle-dot"></div>
@@ -194,14 +232,6 @@
                                                     </h3>
                                                     <h4 class="timeline-title">Student at <br> <a href = "https://www.facebook.com/lqddn/?locale=vi_VN"><span>&#9830</span> Le Quy Don High School For the Gifted </a></h4>
                                                  </div>
-                                                 <!--Timeline Item-->
-                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2024 - 2028
-                                                    </h3>
-                                                    <h4 class="timeline-title">Student at <br> <a href = "https://my.usf.edu/new_myusf/home_myusf/index"><span>&#9830</span> University of South Florida</a></h4>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -212,12 +242,25 @@
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
                                                 <!-- Timeline Item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> Feb 2025 - Now
+                                                    </h3>
+                                                    <h4 class="timeline-title"><a href = "https://sites.google.com/view/udithalder/"><span>&#9830</span> USF Rehabilitation, Robotics and Prosthetics Test Lab</a><br><em><small><small>Software Developer and ML researcher</small></small></em></h4>
+                                                    <p class="timeline-text">
+                                                        &#9830 Developed a neural network-based framework for real-time shape estimation and motion tracking of soft robotic arms. <br>
+                                                        &#9830 Implemented vision-based tracking and simulation tools to reconstruct and visualize robot deformations using Cosserat rod theory. <br>
+                                                        &#9830 Optimized robot shape reconstruction, achieving 5x faster computation compared to traditional models.
+                                                    </p>
+                                                 </div>
+                                                <!-- Timeline Item -->
                                                  <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> Jun 2023 - Sep 2023
                                                     </h3>
-                                                    <h4 class="timeline-title"><a href = "https://drive.google.com/file/d/1Vu8xNKxp52z1L4qUFf33smailp8pN3UP/view"><span>&#9830</span> Kite Academy</a><br><em><small><small>Intern - Technology Department</small></small></em></h4>
+                                                    <h4 class="timeline-title"><a href = "https://drive.google.com/file/d/1Vu8xNKxp52z1L4qUFf33smailp8pN3UP/view"><span>&#9830</span> Kite Academy</a><br><em><small><small>IT INTERN</small></small></em></h4>
                                                     <p class="timeline-text">
                                                         &#9830 Assisted developing company's website. <br>
                                                         &#9830 Edited code for company software and applications. <br>
@@ -239,12 +282,11 @@
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> Jul 2022 - Dec 2022
                                                     </h3>
-                                                    <h4 class="timeline-title"><a href = "https://docs.google.com/document/d/197z2mieuNkaD0KW6f5DuJr6dPe0phsrNBVgF_t-wYbY/edit?tab=t.0#heading=h.gjdgxs"> <b><span>&#9830</span> Sign Speak</b></a> <br><em><small><small>Application supporting hearing impaired people</small></small></em></h4>
+                                                    <h4 class="timeline-title"><a href = "https://github.com/tuanha1508/Sign-Speak"> <b><span>&#9830</span> Sign Speak</b></a> <br><em><small><small>Application supporting hearing impaired people</small></small></em></h4>
                                                     <p class="timeline-text">
                                                         &#9830 Led a 2-member competition team and won the first prize in the city-level <br> &nbsp;&nbsp; Science and Technology competition.<br>
                                                         &#9830 Researched hand gesture recognition technology (Hand Tracking) <br> &nbsp;&nbsp; using OpenCV and Media Pipe in Python.
                                                         <br>
-                                                        <a href = "https://github.com/tuanha1508/Sign-Speak">Github</a> 
                                                     </p>
                                                  </div>
                                                  <div class="timeline-item">
@@ -261,7 +303,7 @@
                                                  <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Oct 3, 2022 - Nov 16, 2022
+                                                        <i class="fa fa-calendar"></i> Oct 3, 2021 - Nov 16, 2021
                                                     </h3>
                                                     <h4 class="timeline-title"><a href = "https://github.com/phucmap85/VACIRIS"> <b><span>&#9830</span> Vaciris</b></a><br><em><small><small>Application tracking person has been vaccinated</small></small></em></h4>
                                                     <p class="timeline-text">
@@ -282,7 +324,7 @@
                                                  <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> Mar 2023 - Now
+                                                        <i class="fa fa-calendar"></i> Mar 2023 - May 2024
                                                     </h3>
                                                     <h4 class="timeline-title"><a href = "https://www.facebook.com/codmosproject"> <b><span>&#9830</span> CODMOS</b></a><br><em><small>President</small></em> <br><em><small><small>A club sharing programming knowledge for beginners</small></small></em></h4>
                                                     <p class="timeline-text">
@@ -320,68 +362,272 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Services</h2>
+                            <h2>Skills</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Service item Start-->
                         <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-mobile-alt"></i>
+                            <div class="slider-container">
+                                <h3 class="slider-title">Programming Languages</h3>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <!-- Add duplicate slides for seamless loop -->
+                                        <!-- First set of slides -->
+                                        <div class="slide">
+                                            <img src="../images/logos/python.png" alt="Python">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/java.png" alt="Java">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/javascript.png" alt="JavaScript">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/cpp.png" alt="C++">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/react.png" alt="React">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/dart.png" alt="Dart">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/typescript.png" alt="TypeScript">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/html5.png" alt="HTML5">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/css3.png" alt="CSS3">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/graphql.png" alt="GraphQL">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/sql.png" alt="SQL">
+                                        </div>
+                                        <!-- Duplicate set of slides for continuous scrolling -->
+                                        <div class="slide">
+                                            <img src="../images/logos/python.png" alt="Python">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/java.png" alt="Java">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/javascript.png" alt="JavaScript">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/cpp.png" alt="C++">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/react.png" alt="React">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/dart.png" alt="Dart">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/typescript.png" alt="TypeScript">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/html5.png" alt="HTML5">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/css3.png" alt="CSS3">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/graphql.png" alt="GraphQL">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos/sql.png" alt="SQL">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
                             </div>
                         </div>
-                        <!--Service item Start-->
                         <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
+                            <div class="slider-container">
+                                <h3 class="slider-title">Frameworks</h3>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/angular.png" alt="Angular">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/django.png" alt="Django">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/flutter.png" alt="Flutter">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nestjs.png" alt="NestJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nextjs.png" alt="NextJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nodejs.png" alt="NodeJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/tailwindcss.png" alt="TailwindCSS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/vite.png" alt="Vite">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/vuejs.png" alt="VueJS">
+                                        </div>
+                                        <!-- Duplicate set of slides for continuous scrolling -->
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/angular.png" alt="Angular">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/django.png" alt="Django">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/flutter.png" alt="Flutter">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nestjs.png" alt="NestJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nextjs.png" alt="NextJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/nodejs.png" alt="NodeJS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/tailwindcss.png" alt="TailwindCSS">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/vite.png" alt="Vite">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_framework/vuejs.png" alt="VueJS">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
                             </div>
                         </div>
-                        <!--Service item Start-->
                         <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-palette"></i>
+                            <div class="slider-container">
+                                <h3 class="slider-title">Machine Learning/Deep Learning</h3>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/huggingface.png" alt="HuggingFace">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/mediapipe.png" alt="MediaPipe">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/numpy.png" alt="Numpy">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/opencv.png" alt="OpenCV">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/pytorch.png" alt="PyTorch">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/tensorflow.png" alt="TensorFlow">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/yolov8.png" alt="YOLOv8">
+                                        </div>
+                                        <!-- Duplicate set of slides for continuous scrolling -->
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/huggingface.png" alt="HuggingFace">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/mediapipe.png" alt="MediaPipe">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/numpy.png" alt="Numpy">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/opencv.png" alt="OpenCV">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/pytorch.png" alt="PyTorch">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/tensorflow.png" alt="TensorFlow">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_machine/yolov8.png" alt="YOLOv8">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
                             </div>
                         </div>
-                        <!--Service item Start-->
                         <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
+                            <div class="slider-container">
+                                <h3 class="slider-title">Others</h3>
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img src="../images/logos_other/arduino.png" alt="Arduino">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/autocad.png" alt="AutoCAD">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/figma.png" alt="Figma">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/firebase.png" alt="Firebase">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/github.png" alt="Github">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/matplotlib.png" alt="Matplotlib">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/pandas.png" alt="Pandas">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/povray.png" alt="PovRay">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/sql_server.png" alt="SQL Server">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/vercel.png" alt="Vercel">
+                                        </div>
+                                        <!-- Duplicate set of slides for continuous scrolling -->
+                                        <div class="slide">
+                                            <img src="../images/logos_other/arduino.png" alt="Arduino">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/autocad.png" alt="AutoCAD">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/figma.png" alt="Figma">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/firebase.png" alt="Firebase">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/github.png" alt="Github">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/matplotlib.png" alt="Matplotlib">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/pandas.png" alt="Pandas">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/povray.png" alt="PovRay">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/sql_server.png" alt="SQL Server">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../images/logos_other/vercel.png" alt="Vercel">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
-                            </div>
-                        </div>
-                        <!--Service item Start-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
-                            </div>
-                        </div>
-                        <!--Service item Start-->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-bullhorn"></i>
-                                </div>
-                                <h4>Software Developer</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In a amet placeat doloremque beatae. Quos, reprehenderit. Accusamus harum dolorum minus deleniti iste voluptatibus, nemo maiores dolore eius quidem, pariatur iure.</p>
                             </div>
                         </div>
                     </div>
@@ -398,7 +644,7 @@
                     </div>
                     <div class="row">
                         <div class="activities-heading padd-15">
-                            <h2  style="font-family: Researcher;">My Projects</h2>
+                            <h2  style="font-family: Researcher;">My Projects (Coming Soon...)</h2>
                         </div>
                     </div>
                     <div class="row">
